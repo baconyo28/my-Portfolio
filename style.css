@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -268,3 +272,359 @@ span{
     }
 }
 
+
+#services {
+  background-color: #111;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+/* Hide section by default */
+.hidden {
+  display: none;
+}
+
+/* Example of visible section */
+.visible {
+  display: block;
+}
+
+.service-box {
+  background: #1a1a1a;
+  border: 1px solid #d46a6a;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+}
+.hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Fade-in animation (permanent display after) */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ==== SERVICES SECTION ==== */
+#Services {
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  color: #fff;
+  padding: 100px 8%;
+  text-align: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#Services h2 {
+  font-size: 2.8rem;
+  margin-bottom: 70px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#Services h2 span {
+  color: #ff3b3b; /* Red accent */
+}
+
+/* Grid layout */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+/* Card style */
+.service-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px 25px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+/* Glow border effect */
+.service-box::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(45deg, #ff3b3b, #ffffff, #ff3b3b);
+  z-index: -1;
+  border-radius: 22px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.service-box:hover::before {
+  opacity: 1;
+}
+
+/* Icon */
+.icon-box {
+  background: linear-gradient(135deg, #ff3b3b, #b30000);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.3);
+  transition: all 0.4s ease;
+}
+
+.icon-box i {
+  font-size: 1.8rem;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Text */
+.service-box h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.service-box p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Hover effects */
+.service-box:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(255, 59, 59, 0.1);
+}
+
+.service-box:hover .icon-box {
+  transform: rotate(10deg) scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 59, 59, 0.6);
+}
+
+.service-box:hover i {
+  transform: scale(1.2);
+}
+
+.service-box:hover h3 {
+  color: #ff3b3b;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === PROJECTS SECTION === */
+#Projects {
+  background: #000;
+  color: #fff;
+  padding: 80px 4%;
+  min-height: 100vh;
+  text-align: center;
+}
+
+#Projects h2 {
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+}
+
+#Projects h2 span {
+  color: #ff3b3b;
+  border-bottom: 3px solid #ff3b3b;
+  padding-bottom: 5px;
+}
+
+/* === PROJECT ROWS === */
+.projects-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.project-item {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  height: 300px;
+}
+
+.project-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.6s ease;
+  filter: brightness(80%) contrast(110%);
+}
+
+.project-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(50%) contrast(130%);
+}
+
+/* === TITLE EFFECT === */
+.project-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: all 0.5s ease;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #ff3b3b, 0 0 20px #ff3b3b, 0 0 40px #ff3b3b;
+}
+
+.project-item:hover .project-title {
+  opacity: 1;
+  animation: glow 1.5s infinite alternate;
+}
+
+/* === GLOW ANIMATION === */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff3b3b, 0 0 20px #ff3b3b, 0 0 30px #ff3b3b;
+  }
+  to {
+    text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000;
+  }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .projects-row {
+    flex-direction: column;
+  }
+  .project-item {
+    height: 250px;
+  }
+}
+
+/* ==== CONTACT SECTION ==== */
+#Contact {
+  background: #0f0f0f;
+  color: #fff;
+  padding: 80px 5%;
+  min-height: 100vh;
+  text-align: center;
+}
+
+#Contact h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#contact-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  background: #2a2a2a;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  box-shadow: 0 0 10px #ff3b3b;
+}
+
+#contact-form button {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  margin-top: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  width: 130px;
+}
+
+#contact-form button:hover {
+  background: #ff3b3b;
+  color: #fff;
+  box-shadow: 0 0 15px #ff3b3b;
+}
+
+#Contact footer {
+  margin-top: 50px;
+  font-size: 0.8rem;
+  color: #888;
+  letter-spacing: 1px;
+}

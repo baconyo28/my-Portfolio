@@ -1,6 +1,7 @@
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <!DOCTYPE html>
 <html lang="en">
-    
+  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,29 +14,24 @@
         <a href="#" class="logo">JOM</a>
 
         <nav>
-            <a href="#" class="active"> Home</a>
-            <a href="#" >Services</a>
-            <a href="#" >Skills</a>
-            <a href="#" >Education</a>
-            <a href="#" >Experience</a>
-            <a href="#" >Contact</a>
+            <a href="#" id="homeLink" class="active">Home</a>
+            <a href="#" id="servicesLink">Services</a>
+            <a href="#" id="projectsLink">Projects</a>
+            <a href="#" id="contactLink">Contact</a>
+            <a href="#" id="feedbackLink">Feedback</a>
         </nav>
     </header>
-    <section class="home">
+
+    <section class="home" id="home">
         <div class="home-img">
             <img src="main.png" alt="">
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>JOM</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
-            <p>Passionate Graphic Artist dedicated to crafting visually dynamic
-and user-centric designs. My experience spans a variety of media,
-including social media content creation, logo design, brochure
-layouts, and digital painting. I thrive on leveraging typography, color
-theory,and composition to solve visual challenges. I am a
-collaborative professional, always seeking to understand client
-needs deeply to create design solutions that are not just
-aesthetically pleasing, but strategically sound.
+            <p>
+             A skilled Graphic Artist and Draftsman proficient in Adobe Photoshop, InDesign, Canva, and drafting tools. Experienced in creating creative designs and detailed architectural, structural, electrical, and plumbing plans with precision and visual impact.
+            </p>
             <div class="social-icons">
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#"><i class="fa-brands fa-github"></i></a>
@@ -44,6 +40,157 @@ aesthetically pleasing, but strategically sound.
             </div>
             <a href="#" class="btn">Hire me</a>
         </div>
+  
     </section>
+
+<section id="Services" class="hidden fade">
+  <h2>My <span>Services</span></h2>
+
+  <div class="services-container">
+
+    <!-- ORIGINAL SERVICES -->
+    <div class="service-box">
+      <div class="icon-box">
+        <i class="fa-solid fa-pen-nib"></i>
+      </div>
+      <h3>Logo Design</h3>
+      <p>Creative and professional logos that represent your brand identity and vision.</p>
+    </div>
+
+    <div class="service-box">
+      <div class="icon-box">
+        <i class="fa-solid fa-image"></i>
+      </div>
+      <h3>Social Media Graphics</h3>
+      <p>Eye-catching visuals designed to boost engagement and digital presence.</p>
+    </div>
+
+    <div class="service-box">
+      <div class="icon-box">
+        <i class="fa-solid fa-paintbrush"></i>
+      </div>
+      <h3>Digital Illustration</h3>
+      <p>Custom illustrations for branding, marketing, or creative storytelling.</p>
+    </div>
+
+    <!-- NEW TECHNICAL SERVICES -->
+    <div class="service-box">
+      <div class="icon-box">
+        <i class="fa-solid fa-ruler-combined"></i>
+      </div>
+      <h3>Architectural Plans</h3>
+      <p>Detailed drafting and design layouts focusing on aesthetics and functionality.</p>
+    </div>
+
+    <div class="service-box">
+      <div class="icon-box">
+        <i class="fa-solid fa-building"></i>
+      </div>
+      <h3>Structural Plans</h3>
+      <p>Technical drawings ensuring project stability, safety, and engineering accuracy.</p>
+    </div>
+
+    <div class="service-box">
+      <div class="icon-box">
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+      <h3>Electrical Plans</h3>
+      <p>Comprehensive electrical layout designs for efficient and safe power systems.</p>
+    </div>
+
+    <div class="service-box">
+      <div class="icon-box">
+        <i class="fa-solid fa-faucet"></i>
+      </div>
+      <h3>Plumbing Plans</h3>
+      <p>Professional plumbing system blueprints for smooth water flow and installation efficiency.</p>
+    </div>
+
+    <!-- ADDED SERVICE -->
+    <div class="service-box">
+      <div class="icon-box">
+        <i class="fa-solid fa-drafting-compass"></i>
+      </div>
+      <h3>Sketch Plan</h3>
+      <p>Conceptual sketches and preliminary layouts that bring design ideas to life before final drafting.</p>
+    </div>
+
+  </div>
+</section>
+</section>
+
+<section id="Projects" class="hidden fade">
+  <h2>My <span>Projects</span></h2>
+
+  <div class="projects-row">
+    <div class="project-item">
+      <img src="project1.jpg" alt="Project 1">
+      <div class="project-title">Architectural Design</div>
+    </div>
+    <div class="project-item">
+      <img src="project2.jpg" alt="Project 2">
+      <div class="project-title">Structural Layout</div>
+    </div>
+  </div>
+
+  <div class="projects-row">
+    <div class="project-item">
+      <img src="project3.jpg" alt="Project 3">
+      <div class="project-title">Electrical Plan</div>
+    </div>
+    <div class="project-item">
+      <img src="project4.jpg" alt="Project 4">
+      <div class="project-title">Plumbing Plan</div>
+    </div>
+  </div>
+
+  <div class="projects-row">
+    <div class="project-item">
+      <img src="project5.jpg" alt="Project 5">
+      <div class="project-title">3D Visualization</div>
+    </div>
+    <div class="project-item">
+      <img src="project6.jpg" alt="Project 6">
+      <div class="project-title">Sketch Plan</div>
+    </div>
+  </div>
+
+  <div class="projects-row">
+    <div class="project-item">
+      <img src="project7.jpg" alt="Project 7">
+      <div class="project-title">Commercial Design</div>
+    </div>
+    <div class="project-item">
+      <img src="project8.jpg" alt="Project 8">
+      <div class="project-title">Personal Works</div>
+    </div>
+  </div>
+</section>
+
+<section id="Contact" class="hidden fade">
+  <h2>CONTACT</h2>
+
+  <form id="contact-form">
+    <label for="name">NAME *</label>
+    <input type="text" id="name" name="name" placeholder="Your name..." required>
+
+    <label for="email">EMAIL ADDRESS *</label>
+    <input type="email" id="email" name="email" placeholder="Your email address..." required>
+
+    <label for="phone">CONTACT NUMBER *</label>
+    <input type="text" id="phone" name="phone" placeholder="Your contact number..." required>
+
+    <label for="message">MESSAGE *</label>
+    <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
+
+    <button type="submit">SUBMIT</button>
+  </form>
+
+  <footer>
+    <p>JOM</p>
+  </footer>
+</section>
+
+    <script src="script.js"></script>
 </body>
 </html>
