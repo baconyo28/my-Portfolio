@@ -8,7 +8,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
 
   const serviceID = "service_mjuot8s"; // ✅ Your EmailJS service ID
-  const templateID = "Ytemplate_pf2x8ub"; // ✅ Replace with your actual template ID
+
 
   emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
