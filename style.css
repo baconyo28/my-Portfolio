@@ -26,47 +26,43 @@ body{
     color: white;
 }
 
-header{
-    margin-top: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem 9%;
-    background-color: transparent;
-    filter: drop-shadow(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center; /* centers the nav */
+  align-items: center;
+  z-index: 100;
 }
 
-.logo{
-    font-size: 3rem;
-    color: #b74b4b;
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.5s ease;
+nav {
+  display: flex;
+  gap: 4rem;
 }
 
-.logo:hover{
-    transform: scale(1.1);
-}
-
-nav a{
-    font-size: 1.8rem;
-    color: white;
-    margin-left: 4rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
 }
 
 nav a:hover,
-nav a.active{
-    color: #b74b4b;
-    border-bottom: 3px solid #b74b4b;
+nav a.active {
+  color: #b74b4b;
+  border-bottom: 3px solid #b74b4b;
 }
+
+/* Hide logo if any exists */
+.logo {
+  display: none !important;
+}
+
 
 @media(max-width:995px){
     nav{
@@ -627,4 +623,263 @@ span{
   font-size: 0.8rem;
   color: #888;
   letter-spacing: 1px;
+}
+
+/* ==== FEEDBACK SECTION ==== */
+#Feedback {
+  background: radial-gradient(circle at top, #1a0000, #000);
+  color: #fff;
+  text-align: center;
+  padding: 100px 5%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#Feedback h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+#Feedback h2 span {
+  color: #ff2e2e;
+  text-shadow: 0 0 20px #ff2e2e;
+}
+
+.feedback-sub {
+  color: #aaa;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+/* Feedback form */
+.feedback-container {
+  background: rgba(255, 0, 0, 0.05);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+  animation: glowIn 1.2s ease-out;
+}
+
+/* Star Rating */
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 3rem;
+  color: #444;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.star:hover,
+.star.active {
+  color: #ff2e2e;
+  text-shadow: 0 0 15px #ff2e2e, 0 0 30px #ff2e2e;
+  transform: scale(1.2);
+}
+
+/* === FEEDBACK BUTTON === */
+.feedback-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #b30000;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #b30000;
+  transition: all 0.3s ease;
+}
+.feedback-btn:hover {
+  background: #ff1a1a;
+  box-shadow: 0 0 20px #ff1a1a;
+  transform: scale(1.05);
+}
+
+/* === MODAL STYLE === */
+.feedback-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.feedback-content {
+  background: #111;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #b30000;
+  color: white;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: slideIn 0.5s ease;
+}
+@keyframes slideIn {
+  from {transform: translateY(-30px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+.feedback-content h2 {
+  color: #ff1a1a;
+  margin-bottom: 15px;
+}
+
+.feedback-content input,
+.feedback-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background: #222;
+  border: 1px solid #b30000;
+  color: white;
+  border-radius: 8px;
+  outline: none;
+}
+.feedback-content input:focus,
+.feedback-content textarea:focus {
+  box-shadow: 0 0 10px #ff1a1a;
+}
+
+.stars {
+  margin: 10px 0;
+}
+.star {
+  font-size: 28px;
+  color: #444;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.star.active {
+  color: #ff1a1a;
+  text-shadow: 0 0 10px #ff1a1a;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  background: #b30000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.submit-btn:hover {
+  background: #ff1a1a;
+  box-shadow: 0 0 10px #ff1a1a;
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s;
+}
+.close:hover {
+  color: #ff1a1a;
+}
+
+/* === FEEDBACK DISPLAY === */
+#feedbackDisplay {
+  background: black;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+#feedbackList {
+  margin-top: 15px;
+}
+.feedback-item {
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
+  animation: fadeUp 0.4s ease;
+}
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+.feedback-item span {
+  color: #ff1a1a;
+  font-size: 14px;
+}
+
+/* Animations */
+@keyframes glowIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === HAMBURGER MENU === */
+.menu-icon {
+  display: none;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2.5rem;
+  color: #b74b4b;
+  cursor: pointer;
+  z-index: 200;
+  transition: 0.3s ease;
+}
+
+.menu-icon:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* === MOBILE VIEW NAVBAR === */
+@media (max-width: 995px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background-color: #161616;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 3px solid #b74b4b;
+    transition: right 0.4s ease;
+    z-index: 100;
+  }
+
+  nav.active {
+    right: 0;
+  }
 }

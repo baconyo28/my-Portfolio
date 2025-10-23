@@ -1,196 +1,241 @@
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">JOM</a>
 
-        <nav>
-            <a href="#" id="homeLink" class="active">Home</a>
-            <a href="#" id="servicesLink">Services</a>
-            <a href="#" id="projectsLink">Projects</a>
-            <a href="#" id="contactLink">Contact</a>
-            <a href="#" id="feedbackLink">Feedback</a>
-        </nav>
-    </header>
+  <header>
+  <div class="menu-icon" id="menu-icon">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <nav id="navbar">
+    <a href="#" id="homeLink" class="active">Home</a>
+    <a href="#" id="servicesLink">Services</a>
+    <a href="#" id="projectsLink">Projects</a>
+    <a href="#" id="contactLink">Contact</a>
+  </nav>
+</header>
 
-    <section class="home" id="home">
-        <div class="home-img">
-            <img src="main.png" alt="">
+  <!-- HOME SECTION -->
+  <section class="home" id="home">
+    <div class="home-img">
+      <img src="main.png" alt="">
+    </div>
+    <div class="home-content">
+      <h1>Hi, It's <span>JOM</span></h1>
+      <h3 class="typing-text">I'm a <span class="role"></span></h3>
+      <p>
+        A skilled Graphic Artist and Draftsman proficient in Adobe Photoshop, InDesign, Canva, and drafting tools.
+        Experienced in creating creative designs and detailed architectural, structural, electrical, and plumbing
+        plans with precision and visual impact.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <a href="#" class="btn">Hire me</a>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="Services" class="hidden fade">
+    <h2>My <span>Services</span></h2>
+    <div class="services-container">
+
+      <div class="service-box">
+        <div class="icon-box">
+          <i class="fa-solid fa-pen-nib"></i>
         </div>
-        <div class="home-content">
-            <h1>Hi, It's <span>JOM</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
-            <p>
-             A skilled Graphic Artist and Draftsman proficient in Adobe Photoshop, InDesign, Canva, and drafting tools. Experienced in creating creative designs and detailed architectural, structural, electrical, and plumbing plans with precision and visual impact.
-            </p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-            <a href="#" class="btn">Hire me</a>
+        <h3>Logo Design</h3>
+        <p>Creative and professional logos that represent your brand identity and vision.</p>
+      </div>
+
+      <div class="service-box">
+        <div class="icon-box">
+          <i class="fa-solid fa-image"></i>
         </div>
-  
-    </section>
-
-<section id="Services" class="hidden fade">
-  <h2>My <span>Services</span></h2>
-
-  <div class="services-container">
-
-    <!-- ORIGINAL SERVICES -->
-    <div class="service-box">
-      <div class="icon-box">
-        <i class="fa-solid fa-pen-nib"></i>
+        <h3>Social Media Graphics</h3>
+        <p>Eye-catching visuals designed to boost engagement and digital presence.</p>
       </div>
-      <h3>Logo Design</h3>
-      <p>Creative and professional logos that represent your brand identity and vision.</p>
+
+      <div class="service-box">
+        <div class="icon-box">
+          <i class="fa-solid fa-paintbrush"></i>
+        </div>
+        <h3>Digital Illustration</h3>
+        <p>Custom illustrations for branding, marketing, or creative storytelling.</p>
+      </div>
+
+      <div class="service-box">
+        <div class="icon-box">
+          <i class="fa-solid fa-ruler-combined"></i>
+        </div>
+        <h3>Architectural Plans</h3>
+        <p>Detailed drafting and design layouts focusing on aesthetics and functionality.</p>
+      </div>
+
+      <div class="service-box">
+        <div class="icon-box">
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <h3>Structural Plans</h3>
+        <p>Technical drawings ensuring project stability, safety, and engineering accuracy.</p>
+      </div>
+
+      <div class="service-box">
+        <div class="icon-box">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h3>Electrical Plans</h3>
+        <p>Comprehensive electrical layout designs for efficient and safe power systems.</p>
+      </div>
+
+      <div class="service-box">
+        <div class="icon-box">
+          <i class="fa-solid fa-faucet"></i>
+        </div>
+        <h3>Plumbing Plans</h3>
+        <p>Professional plumbing system blueprints for smooth water flow and installation efficiency.</p>
+      </div>
+
+      <div class="service-box">
+        <div class="icon-box">
+          <i class="fa-solid fa-drafting-compass"></i>
+        </div>
+        <h3>Sketch Plan</h3>
+        <p>Conceptual sketches and preliminary layouts that bring design ideas to life before final drafting.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="Projects" class="hidden fade">
+    <h2>My <span>Projects</span></h2>
+
+    <div class="projects-row">
+      <div class="project-item">
+        <img src="project1.jpg" alt="Project 1">
+        <div class="project-title">Architectural Design</div>
+      </div>
+      <div class="project-item">
+        <img src="project2.jpg" alt="Project 2">
+        <div class="project-title">Structural Layout</div>
+      </div>
     </div>
 
-    <div class="service-box">
-      <div class="icon-box">
-        <i class="fa-solid fa-image"></i>
+    <div class="projects-row">
+      <div class="project-item">
+        <img src="project3.jpg" alt="Project 3">
+        <div class="project-title">Electrical Plan</div>
       </div>
-      <h3>Social Media Graphics</h3>
-      <p>Eye-catching visuals designed to boost engagement and digital presence.</p>
+      <div class="project-item">
+        <img src="project4.jpg" alt="Project 4">
+        <div class="project-title">Plumbing Plan</div>
+      </div>
     </div>
 
-    <div class="service-box">
-      <div class="icon-box">
-        <i class="fa-solid fa-paintbrush"></i>
+    <div class="projects-row">
+      <div class="project-item">
+        <img src="project5.jpg" alt="Project 5">
+        <div class="project-title">3D Visualization</div>
       </div>
-      <h3>Digital Illustration</h3>
-      <p>Custom illustrations for branding, marketing, or creative storytelling.</p>
+      <div class="project-item">
+        <img src="project6.jpg" alt="Project 6">
+        <div class="project-title">Sketch Plan</div>
+      </div>
     </div>
 
-    <!-- NEW TECHNICAL SERVICES -->
-    <div class="service-box">
-      <div class="icon-box">
-        <i class="fa-solid fa-ruler-combined"></i>
+    <div class="projects-row">
+      <div class="project-item">
+        <img src="project7.jpg" alt="Project 7">
+        <div class="project-title">Commercial Design</div>
       </div>
-      <h3>Architectural Plans</h3>
-      <p>Detailed drafting and design layouts focusing on aesthetics and functionality.</p>
+      <div class="project-item">
+        <img src="project8.jpg" alt="Project 8">
+        <div class="project-title">Personal Works</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="Contact" class="hidden fade">
+    <h2>CONTACT</h2>
+
+    <form id="contact-form">
+      <label for="name">NAME *</label>
+      <input type="text" id="name" name="name" placeholder="Your name..." required>
+
+      <label for="email">EMAIL ADDRESS *</label>
+      <input type="email" id="email" name="email" placeholder="Your email address..." required>
+
+      <label for="phone">CONTACT NUMBER *</label>
+      <input type="text" id="phone" name="phone" placeholder="Your contact number..." required>
+
+      <label for="message">MESSAGE *</label>
+      <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
+
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    <footer>
+      <p>JOM</p>
+    </footer>
+  </section>
+
+  <!-- ==== FEEDBACK BUTTON ==== -->
+<button id="openFeedback" class="feedback-btn">Feedback</button>
+
+<!-- ==== FEEDBACK MODAL ==== -->
+<div id="feedbackModal" class="feedback-modal">
+  <div class="feedback-content">
+    <span id="closeFeedback" class="close">&times;</span>
+    <h2>💬 Your Feedback</h2>
+
+    <input type="text" id="fbName" placeholder="Your Name" required />
+
+    <div class="stars">
+      <span class="star" data-value="1">&#9733;</span>
+      <span class="star" data-value="2">&#9733;</span>
+      <span class="star" data-value="3">&#9733;</span>
+      <span class="star" data-value="4">&#9733;</span>
+      <span class="star" data-value="5">&#9733;</span>
     </div>
 
-    <div class="service-box">
-      <div class="icon-box">
-        <i class="fa-solid fa-building"></i>
-      </div>
-      <h3>Structural Plans</h3>
-      <p>Technical drawings ensuring project stability, safety, and engineering accuracy.</p>
-    </div>
-
-    <div class="service-box">
-      <div class="icon-box">
-        <i class="fa-solid fa-bolt"></i>
-      </div>
-      <h3>Electrical Plans</h3>
-      <p>Comprehensive electrical layout designs for efficient and safe power systems.</p>
-    </div>
-
-    <div class="service-box">
-      <div class="icon-box">
-        <i class="fa-solid fa-faucet"></i>
-      </div>
-      <h3>Plumbing Plans</h3>
-      <p>Professional plumbing system blueprints for smooth water flow and installation efficiency.</p>
-    </div>
-
-    <!-- ADDED SERVICE -->
-    <div class="service-box">
-      <div class="icon-box">
-        <i class="fa-solid fa-drafting-compass"></i>
-      </div>
-      <h3>Sketch Plan</h3>
-      <p>Conceptual sketches and preliminary layouts that bring design ideas to life before final drafting.</p>
-    </div>
-
+    <textarea id="fbMessage" rows="3" placeholder="Share your feedback..." required></textarea>
+    <button id="submitFeedback" class="submit-btn">Submit</button>
   </div>
+</div>
+
+<!-- ==== FEEDBACK DISPLAY ==== -->
+<section id="feedbackDisplay">
+  <h3>⭐ Latest Feedback</h3>
+  <div id="feedbackList"></div>
 </section>
-</section>
 
-<section id="Projects" class="hidden fade">
-  <h2>My <span>Projects</span></h2>
 
-  <div class="projects-row">
-    <div class="project-item">
-      <img src="project1.jpg" alt="Project 1">
-      <div class="project-title">Architectural Design</div>
-    </div>
-    <div class="project-item">
-      <img src="project2.jpg" alt="Project 2">
-      <div class="project-title">Structural Layout</div>
-    </div>
-  </div>
+  <script src="script.js"></script>
+  <script>
+    // Toggle nav menu for mobile
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
 
-  <div class="projects-row">
-    <div class="project-item">
-      <img src="project3.jpg" alt="Project 3">
-      <div class="project-title">Electrical Plan</div>
-    </div>
-    <div class="project-item">
-      <img src="project4.jpg" alt="Project 4">
-      <div class="project-title">Plumbing Plan</div>
-    </div>
-  </div>
-
-  <div class="projects-row">
-    <div class="project-item">
-      <img src="project5.jpg" alt="Project 5">
-      <div class="project-title">3D Visualization</div>
-    </div>
-    <div class="project-item">
-      <img src="project6.jpg" alt="Project 6">
-      <div class="project-title">Sketch Plan</div>
-    </div>
-  </div>
-
-  <div class="projects-row">
-    <div class="project-item">
-      <img src="project7.jpg" alt="Project 7">
-      <div class="project-title">Commercial Design</div>
-    </div>
-    <div class="project-item">
-      <img src="project8.jpg" alt="Project 8">
-      <div class="project-title">Personal Works</div>
-    </div>
-  </div>
-</section>
-
-<section id="Contact" class="hidden fade">
-  <h2>CONTACT</h2>
-
-  <form id="contact-form">
-    <label for="name">NAME *</label>
-    <input type="text" id="name" name="name" placeholder="Your name..." required>
-
-    <label for="email">EMAIL ADDRESS *</label>
-    <input type="email" id="email" name="email" placeholder="Your email address..." required>
-
-    <label for="phone">CONTACT NUMBER *</label>
-    <input type="text" id="phone" name="phone" placeholder="Your contact number..." required>
-
-    <label for="message">MESSAGE *</label>
-    <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
-
-    <button type="submit">SUBMIT</button>
-  </form>
-
-  <footer>
-    <p>JOM</p>
-  </footer>
-</section>
-
-    <script src="script.js"></script>
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('open');
+      const icon = hamburger.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    });
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
